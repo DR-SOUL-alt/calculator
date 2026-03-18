@@ -26,7 +26,7 @@
                                     <td>{{ $car->reg_number }}</td>
                                     <td>{{ $car->brand }}</td>
                                     <td>{{ $car->model }}</td>
-                                    <td>{{ $car->lecturer->name }} {{ $car->lecturer->surname }}</td>
+                                    <td>{{ $car->owner->name }} {{ $car->owner->surname }}</td>
                                     <td>
                                         <a href="{{ route('cars.edit', $car->id) }}" class="btn btn-info">Edit</a>
                                         <form action="{{ route('cars.destroy', $car->id) }}" method="POST" style="display:inline">

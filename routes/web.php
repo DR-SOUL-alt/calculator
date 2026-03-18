@@ -23,14 +23,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('bmi', [App\Http\Controllers\BmiController::class, 'index'])->name('bmi.index');
 Route::post('/bmi/calculate', [BmiController::class, 'calculate'])->name('bmi.calculate');
-// Lecturers Routes
-Route::get('/lecturers', [App\Http\Controllers\LecturerController::class, 'index'])->name('lecturers.index');
-Route::get('/lecturers/create', [App\Http\Controllers\LecturerController::class, 'create'])->name('lecturers.create');
-Route::post('/lecturers', [App\Http\Controllers\LecturerController::class, 'store'])->name('lecturers.store');
-Route::get('/lecturers/{lecturer}/edit', [App\Http\Controllers\LecturerController::class, 'edit'])->name('lecturers.edit');
-Route::put('/lecturers/{lecturer}', [App\Http\Controllers\LecturerController::class, 'update'])->name('lecturers.update');
-Route::delete('/lecturers/{lecturer}', [App\Http\Controllers\LecturerController::class, 'destroy'])->name('lecturers.destroy');
-
+// Owner routes
+Route::get('/owners', [App\Http\Controllers\OwnerController::class, 'index'])->name('owners.index');
+Route::get('/owners/create', [App\Http\Controllers\OwnerController::class, 'create'])->name('owners.create');
+Route::post('/owners', [App\Http\Controllers\OwnerController::class, 'store'])->name('owners.store');
+Route::get('/owners/{owner}/edit', [App\Http\Controllers\OwnerController::class, 'edit'])->name('owners.edit');
+Route::put('/owners/{owner}', [App\Http\Controllers\OwnerController::class, 'update'])->name('owners.update');
+Route::delete('/owners/{owner}', [App\Http\Controllers\OwnerController::class, 'destroy'])->name('owners.destroy');
 // Cars Routes
 Route::get('/cars', [App\Http\Controllers\CarController::class, 'index'])->name('cars.index');
 Route::get('/cars/create', [App\Http\Controllers\CarController::class, 'create'])->name('cars.create');

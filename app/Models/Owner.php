@@ -4,18 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lecturer extends Model
+class Owner extends Model
 {
     protected $fillable = [
         'name',
-        'surname',
-        'birthday',
-        'phone',
-        'email'
+        'surname'
     ];
 
     public function cars()
     {
-        return $this->hasMany(Car::class);
+        return $this->hasMany(Car::class, 'owner_id');
     }
 }

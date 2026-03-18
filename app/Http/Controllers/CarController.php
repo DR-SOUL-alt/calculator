@@ -3,21 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
-use App\Models\Lecturer;
+use App\Models\Owner;  // изменено с Lecturer
 use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
     public function index()
     {
-        $cars = Car::with('lecturer')->get();
+        $cars = Car::with('owner')->get();  // изменено с 'lecturer'
         return view('cars.index', compact('cars'));
     }
 
     public function create()
     {
-        $lecturers = Lecturer::all();
-        return view('cars.create', compact('lecturers'));
+        $owners = Owner::all();
+        return view('cars.create', compact('owners'));
     }
 
     public function store(Request $request)
@@ -28,8 +28,8 @@ class CarController extends Controller
 
     public function edit(Car $car)
     {
-        $lecturers = Lecturer::all();
-        return view('cars.edit', compact('car', 'lecturers'));
+        $owners = Owner::all();
+        return view('cars.edit', compact('car', 'owners'));
     }
 
     public function update(Request $request, Car $car)

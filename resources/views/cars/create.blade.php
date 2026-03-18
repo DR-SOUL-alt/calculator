@@ -25,10 +25,10 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Owner (Lecturer):</label>
-                                <select name="lecturer_id" class="form-control" required>
-                                    <option value="">Select Lecturer</option>
-                                    @foreach($lecturers as $lecturer)
-                                        <option value="{{ $lecturer->id }}">{{ $lecturer->name }} {{ $lecturer->surname }}</option>
+                                <select name="owner_id" class="form-control" required>
+                                    <option value="">Select Owner</option>
+                                    @foreach($owners as $owner)
+                                    <option value="{{ $owner->id }}">{{ $owner->name }} {{ $owner->surname }}</option>
                                     @endforeach
                                 </select>
                             </div>

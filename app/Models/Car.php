@@ -10,11 +10,11 @@ class Car extends Model
         'reg_number',
         'brand',
         'model',
-        'lecturer_id'
+        'owner_id'
     ];
 
-    public function lecturer()
+    public function owner()
     {
-        return $this->belongsTo(Lecturer::class);
+        return $this->belongsTo(Owner::class);
     }
 }

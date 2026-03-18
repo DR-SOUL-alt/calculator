@@ -38,7 +38,7 @@
                             <a class="nav-link" href="{{ route('bmi.index') }}">BMI Calculator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('lecturers.index') }}">Lecturers</a>
+                            <a class="nav-link" href="{{ route('owners.index') }}">Owners</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cars.index') }}">Cars</a>
